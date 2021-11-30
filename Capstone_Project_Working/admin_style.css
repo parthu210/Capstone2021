@@ -1,0 +1,96 @@
+.event_main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.newevent_btn{
+    margin-top: 50px;
+    align-self: center;
+}
+
+.mytable{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 20px;
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+.mytable td, .mytable th{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    padding: 20px;
+    border: none;
+}
+.titlename{
+    text-align: center;
+}
+.mytable td{
+    text-align: center;
+    
+}
+
+.mytable th{
+    background-color: rgb(90, 90, 90);
+    color: white;
+    font-weight: bold;
+}
+.mytable th:last-child{
+    border-radius: 0 20px 0 0;
+} 
+.mytable th:first-child{
+    border-radius: 20px 0 0 0;
+}
+tr:nth-of-type(even){
+    background-color: #ddd;
+}
+.adButtons{
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1024px) {
+    .mytable{
+        width: 90%;
+    }
+    .mytable td, .mytable th{
+        font-size: 15px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px)
+    {
+        .mytable thead {
+            border: none;
+            display: none;
+        }
+        .mytable tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: 7px;
+        }
+        .mytable td {
+            display: block;
+            text-align: right;
+            border: none;
+            font-size: 16px;
+        }
+        td:nth-of-type(1)::before{ content: "#";}
+        td:nth-of-type(2)::before{ content: "Name";}
+        td:nth-of-type(3)::before{ content: "Username";}
+        td:nth-of-type(4)::before{ content: "Type";}
+        td:nth-of-type(5)::before{ content: "Action";}
+        
+        .mytable td:before{
+            float: left;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+    }
