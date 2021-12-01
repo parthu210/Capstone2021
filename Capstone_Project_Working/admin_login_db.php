@@ -44,12 +44,12 @@ if(isset($_POST['login-submit']))
         elseif(empty($user))
         {
             $_SESSION['error']  = 'Invalid Username!';
-            header('Location: index.php');     
+            header('Location: admin_index.php');     
         }
         elseif(empty($userp))
         {
             $_SESSION['error']  = 'Invalid Password!';
-            header('Location: index.php');     
+            header('Location: admin_index.php');     
         }
 
     }

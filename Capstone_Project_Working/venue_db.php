@@ -24,8 +24,8 @@ if(! mysqli_connect_errno()) {
     //use fo uplode a file in tmp-file.
     if(is_uploaded_file($vimage['tmp_name']))
     {  //move the image from tmp-file file.
-        move_uploaded_file($vimage['tmp_name'],"user/images/".time()."test.png");
-        $image = 'user/images/' .time(). 'test.png';
+        move_uploaded_file($vimage['tmp_name'],"images/".time()."test.png");
+        $image = 'images/' .time(). 'test.png';
         
     }
 
@@ -33,7 +33,7 @@ if(! mysqli_connect_errno()) {
     $insert=mysqli_query($db,"insert into venues(name,address,description,rate,capacity,venue_image) values ('$venue','$address','$description','$rate','$capacity','$image')");
     if($insert)
     {
-        echo"New venue inserted successfuly";
+        header('location:venue_table.php');
     }
 
 }

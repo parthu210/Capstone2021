@@ -82,7 +82,7 @@ $type=$_SESSION['type'];
       <!--name textbox -->
       <div class="form-group">
         <label for="name" class="control-label">Name</label>
-        <input type="text" name="name" class="form-control" placeholder="Enter Name" value="<?= $_SESSION['name'] ?>" required> 
+        <input type="text" name="name" pattern="[A-Za-z]+" class="form-control" placeholder="Enter Name" value="<?= $_SESSION['name'] ?>" required> 
       </div>
 
       <!--address textbox -->

@@ -23,9 +23,8 @@ include('user_db_connection.php');
         <header>
             <img src="img/Logo1.png" alt="logo" width="140" height="140">
             <div class="nav">
-                <a href="user_index.php">Home</a>
+                <a href="index.php">Home</a>
                 <a href="user_venue.php">Venues</a>
-                <a href=" ">About</a>
                 <a href="contact.html">Contact</a>
             </div>
         </header>
@@ -166,7 +165,7 @@ include('user_db_connection.php');
                   <td><?php echo $row['description'] ?></td>
                   <td><?php echo $row['rate'].' Per hour' ?></td>
                   <td><?php echo $row['capacity'] ?></td>
-                  <td><?= "<a href='user_booking_addNew.php?id_venues=$row[id_venues]' class='btn btn-primary'>Book</a>"; ?></td>
+                  <td><?= "<a href='user_booking_addNew.php?id_venues=$row[id_venues]' class='btn btn-primary'>Book your event now</a>"; ?></td>
               
                 </tr>
               <?php endwhile; ?>
@@ -177,7 +176,7 @@ include('user_db_connection.php');
         <footer class="footer">
             <div class="footer-top container">
                 <div class="footer-hours">
-                    <h2><span>HOURS</span></h2>
+                    <h2><span>OFFICE HOURS</span></h2>
                     <p><span class="days">Monday</span> <span class="timing">10am - 6pm</span></p>
                     <p><span class="days">Tuesday</span> <span class="timing">10am - 6pm</span></p>
                     <p><span class="days">Wednesday</span> <span class="timing">8am - 6pm</span></p>

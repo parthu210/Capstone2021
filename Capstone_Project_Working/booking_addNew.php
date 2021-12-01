@@ -32,6 +32,7 @@ if(! empty($_SESSION['error'])) {
   width:100%;
   }
 </style>
+<br>
 <div class="container">
 <div class="panel panel-primary">
       <div class="panel-heading" style="text-align:center;background-color: cadetblue">New Entry  </div>
@@ -43,12 +44,12 @@ if(! empty($_SESSION['error'])) {
 		<!--name textbox -->
 		<div class="form-group">
 			<label for="fname"class="control-label">First Name</label>
-			<input type="text" name="fname" class="form-control" placeholder="Enter first name" required> 
+			<input type="text" name="fname" pattern="[A-Za-z]+" class="form-control" placeholder="Enter first name" required> 
 		</div>
     <!--address textbox -->
 		<div class="form-group">
 			<label for="lname" class="control-label">Last Name</label>
-			<input type="text" name="lname" class="form-control" placeholder="Enter last name" required> 
+			<input type="text" name="lname" pattern="[A-Za-z]+" class="form-control" placeholder="Enter last name" required> 
 		</div>
 
     <!--description textbox -->
@@ -59,8 +60,8 @@ if(! empty($_SESSION['error'])) {
 
 	    <!-- rate  -->
       <div class="form-group">
-        <label for="contact"class="control-label">Contact Number</label>
-        <input type="number" name="contact" maxlength="10" class="form-control" placeholder="Enter contact number" required>
+        <label for="contact"class="control-label">Contact Number <i><small>For Example, 226-808-3435 </small></i> </label>
+        <input type="tel" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="Enter contact number" required>
       </div>
 
       <!-- rate  -->

@@ -86,12 +86,12 @@ endwhile;
 		<!--name textbox -->
 		<div class="form-group">
 			<label for="fname"class="control-label">First Name</label>
-			<input type="text" name="fname" class="form-control" value="<?= $_SESSION['firstname'] ?>" > 
+			<input type="text" name="fname" pattern="[A-Za-z]+" class="form-control" value="<?= $_SESSION['firstname'] ?>" > 
 		</div>
     <!--address textbox -->
 		<div class="form-group">
 			<label for="lname" class="control-label">Last Name</label>
-			<input type="text" name="lname" class="form-control" value="<?= $_SESSION['lastname'] ?>" > 
+			<input type="text" name="lname" pattern="[A-Za-z]+" class="form-control" value="<?= $_SESSION['lastname'] ?>" > 
 		</div>
 
     <!--description textbox -->
@@ -102,8 +102,8 @@ endwhile;
 
 	    <!-- rate  -->
       <div class="form-group">
-        <label for="contact"class="control-label">Contact Number</label>
-        <input type="number" name="contact"  class="form-control" value="<?= $_SESSION['contact'] ?>">
+        <label for="contact"class="control-label">Contact Number <i><small>For Example, 226-808-3435 </small></i></label>
+        <input type="tel" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" value="<?= $_SESSION['contact'] ?>">
       </div>
 
       <!-- rate  -->

@@ -133,6 +133,7 @@ th, td {
     align-items: center;
 }
 tr, th, td, img{
+    font-size: 16pt;
     color: black;
     padding: 5px;
     align-content: center;
@@ -225,52 +226,80 @@ h2 {
   font-size: 2em;
 }
 .grid {
-  display: grid;
-  width: 80%;
-  height: fit-content;
-  grid-gap: 6rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-items: start;
-    margin: 0 auto;
-}
-
-.grid-item {
-  background-color: #fff;
-  border-radius: 0.4rem;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: 0.2s;
-    height: 60em;
-}
-
-.grid-item:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
-    background-color: antiquewhite;
-}
-
-.card-img {
-  width: 100%;
-  height: 15rem;
-  object-fit: cover;
-}
-
-
-.card-header {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #0d0d0d;
-  margin-bottom: 1rem;
-}
-
-.card-text {
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  line-height: 1.7;
-  color: #3d3d3d;
-  margin-bottom: 2.5rem;
-}
-
+    display: grid;
+    width: 80%;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+      margin: 0 auto;
+  }
+  
+  .grid-item {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+      height: 25em;
+      margin-bottom: 5rem;
+  }
+  
+  .grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+      background-color: antiquewhite;
+  }
+  
+  .card-img {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+  padding-right: 30px;
+  }
+  
+  .card-content {
+    padding: 0.5rem;
+  }
+  
+  .card-header {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 2.5rem;
+  }
+  .v_button {
+    background-color:#008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 60em) {
+    body {
+      padding: 3rem;
+    }
+  
+    .grid {
+      grid-gap: 3rem;
+    }
+  }
+    
 @media only screen and (max-width: 60em) {
   body {
     padding: 3rem;
@@ -513,7 +542,6 @@ section i{
     }
     .footer{
         width: 100%;
-        margin: 0 auto;
     }
     #slider{
         width: 1000px;

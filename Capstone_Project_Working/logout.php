@@ -4,4 +4,4 @@ session_start();
 
 session_destroy();
 
-header('location:index.php');
+header('location:admin_index.php');

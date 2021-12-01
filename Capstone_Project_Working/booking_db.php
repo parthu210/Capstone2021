@@ -18,6 +18,7 @@ if(isset($_POST['submit']))
     $duration = $_POST['duration'];
     $description = $_POST['description'];
     $venue = $_POST['venue_id'];
+    $today_date = date("y-m-d");
 
     // check boolean variable value 
     $is_valid = 1;
@@ -33,20 +34,27 @@ if(isset($_POST['submit']))
     // check if name only contains letters and whitespace
     $test_fname = test_input($_POST["fname"]);
     $test_lname = test_input($_POST["lname"]);
-
+    
     if (!preg_match("/^[a-zA-Z-' ]*$/",$test_fname)) 
     {
         $_SESSION['error'] = 'Enter a valid FIRST NAME!(only letters and white space are allowed.)';
-        header('Location: user_booking_addNew.php');
+        header('Location: booking_addNew.php');
         $is_valid = 0;
       }
       elseif (!preg_match("/^[a-zA-Z-' ]*$/",$test_lname)) 
       {
           $_SESSION['error'] = 'Enter a valid LAST NAME!(only letters and white space are allowed.)';
-          header('Location: user_booking_addNew.php');
+          header('Location: booking_addNew.php');
           $is_valid = 0;
         }
-
+        elseif ($datetime < $today_date) 
+      {
+          $_SESSION['error'] = 'Enter a valid DATE';
+          header('Location: booking_addNew.php');
+          $is_valid = 0;
+        }
+        
+        
 if($is_valid == 1 ){
             //check database connection
             if(! mysqli_connect_errno()) {
@@ -55,7 +63,7 @@ if($is_valid == 1 ){
                 $insert=mysqli_query($db,"insert into bookings(firstname,lastname,email,contact,eventtype,datetime,duration,event_description,venue) values('$fname','$lname','$email','$contact','$eventtype','$datetime','$duration','$description','$venue')");
                 if($insert)
                 {
-                header('location:user_book_success.php');
+                header('location:bookedvenue_table.php');
                 }
 
             }

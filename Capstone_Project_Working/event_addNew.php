@@ -32,6 +32,7 @@ if(! empty($_SESSION['error'])) {
   width:100%;
   }
 </style>
+<br>
 <div class="container">
 <div class="panel panel-primary">
       <div class="panel-heading" style="text-align:center;background-color: cadetblue">New Entry  </div>

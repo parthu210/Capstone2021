@@ -71,14 +71,14 @@ if(! empty($_SESSION['error'])) {
         <input type="number" name="capacity"  class="form-control text-right" step="any" value="<?php echo isset($capacity) ? $capacity :0 ?>" required>
       </div>
 
-        <!-- Venue Picutre -->
+         <!-- event banner -->
       <label for="image" class="control-label">Upload Venue Image</label>
       <div class="custom-file">
         <!-- MAX FILE SIZE -->
         <input type="hidden" name="MAX_FILE_SIZE" value="2048000">
         <!-- Image selection -->
         <input type="file" accept="image/*" class="custom-file-input" name="venue_image" id="venue_picture">
-        <label class="control-label"class="custom-file-label" for="venue_image">Select venue image</label>
+        <label class="custom-file-label" for="venue_image">Select banner image</label>
         <p class="text"><?= $image_msg; ?></p>
       </div><br><br><br>
 
